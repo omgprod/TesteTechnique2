@@ -16,7 +16,10 @@ var RoomSchema = new Schema({
         type: [String],
     },
     updatedAt: {
-        type: Date,
+        type: { type: Date, default: Date.now },
+    },
+    reservedFor: {
+      type: Date,
     },
     reserved: {
         type: Boolean,

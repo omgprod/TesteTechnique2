@@ -1,7 +1,6 @@
 <template>
   <div>
     <vue-good-table style="
-    margin-top: 2%;
     margin-right: 10%;
     margin-left: 10%;
     -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.47);

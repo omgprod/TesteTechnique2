@@ -62,6 +62,7 @@ app.post('/new', (req, res) => {
         description: req.body.description,
         capacity: req.body.capacity,
         equipment: [req.body.equipment],
+        reservedFor: null,
         reserved: 0,
     });
     room.save(function (error) {
@@ -86,14 +87,32 @@ app.post('/new', (req, res) => {
 /**** GET ALL ROOMS UNRESERVED ****/
 app.get('/fetch', (req, res) => {
     Rooms.find({reserved: false})
-        //.sort([['createdAt', -1]])
-        .exec(function (err, room) {
+        .exec(function (err, roomUnreserved) {
             if (err) {
                 throw err
             } else {
-                return res.status(200).send(
-                    room
-                );
+                Rooms.find({reserved: true})
+                    .exec(function (err, room) {
+                        if (err) {
+                            throw err
+                        } else {
+                            console.log(room)
+                            date = [room.reservedFor]
+                            if(date < Date.now()){
+                                console.log(date)
+                                Rooms.findOneAndUpdate(room._id, { reserved: false, reservedFor: null},function (err, roomChanged) {
+                                    if(err){
+                                        console.log(err)
+                                    } else {
+                                        console.log(roomChanged)
+                                    }
+                                })
+                            }
+                            return res.status(200).send(
+                                roomUnreserved
+                            );
+                        }
+                    });
             }
         });
 });
@@ -116,8 +135,8 @@ app.get('/reserved', (req, res) => {
 
 /**** BOOK ONE ROOM  ****/
 app.post('/update', (req, res) => {
-    console.log(req.body[1].id)
-    Rooms.findByIdAndUpdate(req.body[0]._id, { reserved: true, updatedAt: req.body[1].id },function (err, room) {
+    var query = {_id: req.body[0]._id}
+    Rooms.findOneAndUpdate(query, { reserved: true, reservedFor: req.body[1].id },function (err, room) {
         if(err){
             console.log(err)
         } else {
