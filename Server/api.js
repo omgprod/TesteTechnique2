@@ -116,9 +116,8 @@ app.get('/reserved', (req, res) => {
 
 /**** BOOK ONE ROOM  ****/
 app.post('/update', (req, res) => {
-    console.log(req.body)
-    console.log(req.body[0].date)
-    Rooms.findByIdAndUpdate(req.body[0]._id, { reserved: true, updatedAt: req.body[0].date },function (err, room) {
+    console.log(req.body[1].id)
+    Rooms.findByIdAndUpdate(req.body[0]._id, { reserved: true, updatedAt: req.body[1].id },function (err, room) {
         if(err){
             console.log(err)
         } else {

@@ -10,7 +10,7 @@
       @on-selected-rows-change="selectionChanged"
       :columns="columns"
       :rows="rows"
-      max-height="400px"
+      max-height="350px"
       :fixed-header="true"
       :select-options="{ enabled: true,}"
       :search-options="{ enabled: true, }">
@@ -72,7 +72,7 @@
       },
 
       onSubmit(evt) {
-        this.rowSelected.push({'date':{id: this.value}})
+        this.rowSelected.push({id: this.value})
         evt.preventDefault()
         axios.post('http://localhost:8000/update', this.rowSelected)
           .catch(error => {
