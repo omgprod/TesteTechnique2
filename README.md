@@ -15,10 +15,12 @@ NodeJS & NPM
 
 Server: 
 cd Server
-cd npm i
-cd npm start 
+npm update
+npm i
+npm start 
 
 Client:
 cd client
-cd npm i 
-cd npm run dev
+npm update
+npm i 
+npm run dev
