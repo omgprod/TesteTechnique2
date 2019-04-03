@@ -14,16 +14,16 @@ MongoDB en Local base de données : Technique
 NodeJS & NPM
 
 Server: 
-cd Server
-npm update
-npm i
-npm start 
+- cd Server
+- npm update
+- npm i
+- npm start 
 
 Client:
-cd client
-npm update
-npm i 
-npm run dev
+- cd client
+- npm update
+- npm i 
+- npm run dev
 
 # Screen :
 (Index)
