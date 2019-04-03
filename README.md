@@ -24,3 +24,7 @@ cd client
 npm update
 npm i 
 npm run dev
+
+# Screen :
+(Index)
+http://prntscr.com/n6s8wk
