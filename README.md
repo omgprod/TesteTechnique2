@@ -28,3 +28,7 @@ npm run dev
 # Screen :
 (Index)
 http://prntscr.com/n6s8wk
+http://prntscr.com/n6sa7q
+
+(Ajouts de salles)
+http://prntscr.com/n6s9kt
