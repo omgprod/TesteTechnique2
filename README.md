@@ -4,12 +4,13 @@ Back-End  : NodeJS - Express - Mongoose - MongoDB
 Front-End : VueJS ( Vue-Material - BootstrapVue - Axios ... )
 
 JOUR 1 = 50% (Api - Structure Front) + Bonus Form Ajout de Room
-JOUR 2 = 90% (Tableaux Axios Données -  Réservation Fonctionnel ) + Ajout d'une logique de réservation sur le temps en cours 
+
+JOUR 2 = 90% (Tableaux Axios DonnÃ©es -  RÃ©servation Fonctionnel ) + Ajout d'une logique de rÃ©servation sur le temps en cours 
 
 # How To :
 
-pré-requis:
-MongoDB en Local base de données : Technique
+prÃ©-requis:
+MongoDB en Local base de donnÃ©es : Technique
 NodeJS & NPM
 
 Server: 
