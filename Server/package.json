@@ -12,6 +12,9 @@
     "nodemailer": "^5.1.1",
     "nodemon": "^1.18.10"
   },
+  "engines": {
+    "node": "10.x"
+  },
   "description": "api-users-crud",
   "license": "HaggertyBrian",
   "main": "api.js",
