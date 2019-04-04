@@ -112,10 +112,10 @@
               })
             }
           }).then(() => {
-          function time() {
-            location.reload()
-          }
-          setTimeout(time, 2000);
+            axios.get('http://localhost:8000/fetch')
+              .then(response => {
+                this.rows = response.data
+              }).catch(error => console.log(error))
         })
       }
     },
