@@ -2,14 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1ec5559c-ab4f-4c18-9b3a-0b522aeaabf6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/components/Refresh.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Server/api.js" beforeDir="false" afterPath="$PROJECT_DIR$/Server/api.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Server/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/Index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Index.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/Navbar.vue" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Navbar.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/TableSearch.vue" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/TableSearch.vue" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -25,8 +18,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Server/api.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="368">
-              <caret line="112" column="60" selection-start-line="112" selection-start-column="60" selection-end-line="112" selection-end-column="60" />
+            <state relative-caret-position="391">
+              <caret line="101" column="40" selection-start-line="101" selection-start-column="40" selection-end-line="101" selection-end-column="40" />
             </state>
           </provider>
         </entry>
@@ -120,8 +113,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-1028" />
-    <option name="width" value="1035" />
+    <option name="x" value="-1278" />
+    <option name="width" value="1285" />
     <option name="height" value="1047" />
   </component>
   <component name="ProjectView">
@@ -216,18 +209,18 @@
       <workItem from="1554138318372" duration="1457000" />
       <workItem from="1554139810755" duration="261000" />
       <workItem from="1554197971032" duration="23362000" />
-      <workItem from="1554329567561" duration="8238000" />
+      <workItem from="1554329567561" duration="9309000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="40997000" />
+    <option name="totallyTimeSpent" value="42068000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1028" y="0" width="1035" height="1047" extended-state="0" />
+    <frame x="-1278" y="0" width="1285" height="1047" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21965897" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1756215" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -381,8 +374,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Server/api.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="368">
-          <caret line="112" column="60" selection-start-line="112" selection-start-column="60" selection-end-line="112" selection-end-column="60" />
+        <state relative-caret-position="391">
+          <caret line="101" column="40" selection-start-line="101" selection-start-column="40" selection-end-line="101" selection-end-column="40" />
         </state>
       </provider>
     </entry>

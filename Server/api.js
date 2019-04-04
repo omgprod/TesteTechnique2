@@ -99,7 +99,7 @@ app.get('/fetch', (req, res) => {
 
 });
 
-/**** GET ALL ROOMS RESERVED ****/
+/**** UPDATE RESERVED ROOM TO UNRESERVED****/
 app.get('/verify', (req, res) => {
     Rooms.find({reserved: true})
         .exec(function (err, room) {
@@ -108,11 +108,13 @@ app.get('/verify', (req, res) => {
             } else {
                 if (room.lenght !== 0) {
                     for (i = 0; i < room.length; i++) {
-                        console.log(room[i].reservedFor.getTime())
-                        console.log(Date.now())
+                        console.log('                     ')
+                        console.log(JSON.stringify(room[i].reservedFor))
+                        //console.log(room[i].reservedFor.getTime())
+                        //console.log(Date.now())
                         if (room[i].reservedFor.getTime() <= Date.now()) {
-                            console.log('Salle Vacante')
-                            Rooms.findOneAndUpdate(room._id, {reserved: false}, function (err, roomChanged) {
+                            console.log('Salle Vacante: ' + room[i]._id)
+                            Rooms.findByIdAndUpdate(room[i]._id, {reserved: false}, function (err, roomChanged) {
                                 if (err) {
                                     console.log(err)
                                 } else {
