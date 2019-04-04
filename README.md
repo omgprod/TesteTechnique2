@@ -3,9 +3,11 @@
 Back-End  : NodeJS - Express - Mongoose - MongoDB  
 Front-End : VueJS ( Vue-Material - BootstrapVue - Axios ... )
 
-JOUR 1 = 50% (Api - Structure Front) + Bonus Form Ajout de Room
+JOUR 1 = 50% (Api - Structure Front) + Bonus Form Ajout de Salle
 
-JOUR 2 = 90% (Tableaux Axios Données -  Réservation Fonctionnel ) + Ajout d'une logique de réservation sur le temps en cours 
+JOUR 2 = 90% (Tableaux Axios Données -  Réservation Fonctionnel ) + En cours: Ajout d'une logique de réservation sur le temps en cours 
+
+JOUR 3 = 95% ( Logique du temps - Correction Api ) + En cours: Implementation fonction Asynchrone
 
 # How To :
 
