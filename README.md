@@ -11,6 +11,10 @@ JOUR 2 = 90% (Tableau Données, Axios  -  Réservations Fonctionnel ) + En cours
 
 JOUR 3 = 95% ( Logique du temps - Corrections Api ) + En cours: Implementation fonction Asynchrone + Bonus Notifications
 
+JOUR 4 = 99% ( Auto-Refresh du tableaux et déréserves les salles aprés la date et l'heure indiqué pour la réservation )
+
+En cours: Recherche d'animations "super cool" et upload du teste sur heroku ou raspberry  
+
 # How To :
 
 pré-requis:
