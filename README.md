@@ -3,6 +3,8 @@
 Back-End  : NodeJS - Express - Mongoose - MongoDB  
 Front-End : VueJS ( Vue-Material - BootstrapVue - Axios ... )
 
+# Resume : (Deadline 1 Week)
+
 JOUR 1 = 50% (Api - Structure, base Front) + Bonus Form Ajout de Salle
 
 JOUR 2 = 90% (Tableau Données, Axios  -  Réservations Fonctionnel ) + En cours: Ajout d'une logique de réservation sur le temps
