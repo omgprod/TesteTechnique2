@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1ec5559c-ab4f-4c18-9b3a-0b522aeaabf6" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Server/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Server/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/components/TableSearch.vue" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/TableSearch.vue" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -28,8 +27,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/client/src/components/TableSearch.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="229">
-              <caret line="117" column="51" selection-start-line="117" selection-start-column="51" selection-end-line="117" selection-end-column="51" />
+            <state relative-caret-position="276">
+              <caret line="69" column="33" selection-start-line="69" selection-start-column="33" selection-end-line="69" selection-end-column="33" />
               <folding>
                 <element signature="n#style#0;n#vue-good-table#0;n#div#0;n#template#0;n#!!top" expanded="true" />
               </folding>
@@ -211,12 +210,12 @@
       <workItem from="1554139810755" duration="261000" />
       <workItem from="1554197971032" duration="23362000" />
       <workItem from="1554329567561" duration="9309000" />
-      <workItem from="1554373862460" duration="975000" />
+      <workItem from="1554373862460" duration="3184000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="43043000" />
+    <option name="totallyTimeSpent" value="45252000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-6" y="0" width="781" height="830" extended-state="0" />
@@ -346,13 +345,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Server/api.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2216">
-          <caret line="101" column="40" selection-start-line="101" selection-start-column="40" selection-end-line="101" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client/src/components/Index.vue">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="184">
@@ -371,10 +363,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Server/api.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2216">
+          <caret line="101" column="40" selection-start-line="101" selection-start-column="40" selection-end-line="101" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/client/src/components/TableSearch.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="229">
-          <caret line="117" column="51" selection-start-line="117" selection-start-column="51" selection-end-line="117" selection-end-column="51" />
+        <state relative-caret-position="276">
+          <caret line="69" column="33" selection-start-line="69" selection-start-column="33" selection-end-line="69" selection-end-column="33" />
           <folding>
             <element signature="n#style#0;n#vue-good-table#0;n#div#0;n#template#0;n#!!top" expanded="true" />
           </folding>

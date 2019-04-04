@@ -67,18 +67,21 @@
     },
 
     async mounted() {
-      await axios.get('http://localhost:8000/verify')
-        .then(response => {
-          this.rows = response.data
-        }).catch(error => console.log(error))
-      await axios.get('http://localhost:8000/fetch')
-        .then(response => {
-          this.rows = response.data
-        }).catch(error => console.log(error))
+      setInterval(this.doThis, 30000);
     },
 
-
     methods: {
+      async doThis() {
+        axios.get('http://localhost:8000/verify')
+          .then(response => {
+            this.rows = response.data
+          }).catch(error => console.log(error))
+        axios.get('http://localhost:8000/fetch')
+          .then(response => {
+            this.rows = response.data
+          }).catch(error => console.log(error))
+      },
+
       selectionChanged(params) {
         this.rowSelected = params.selectedRows;
       },
@@ -112,10 +115,10 @@
               })
             }
           }).then(() => {
-            axios.get('http://localhost:8000/fetch')
-              .then(response => {
-                this.rows = response.data
-              }).catch(error => console.log(error))
+          axios.get('http://localhost:8000/fetch')
+            .then(response => {
+              this.rows = response.data
+            }).catch(error => console.log(error))
         })
       }
     },
@@ -125,6 +128,7 @@
         .then(response => {
           this.rows = response.data
         }).catch(error => console.log(error))
+      this.doThis()
     },
   };
 </script>
