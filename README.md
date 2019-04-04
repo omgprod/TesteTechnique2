@@ -7,7 +7,7 @@ JOUR 1 = 50% (Api - Structure, base Front) + Bonus Form Ajout de Salle
 
 JOUR 2 = 90% (Tableau Données, Axios  -  Réservations Fonctionnel ) + En cours: Ajout d'une logique de réservation sur le temps
 
-JOUR 3 = 95% ( Logique du temps - Corrections Api ) + En cours: Implementation fonction Asynchrone
+JOUR 3 = 95% ( Logique du temps - Corrections Api ) + En cours: Implementation fonction Asynchrone + Bonus Notifications
 
 # How To :
 
@@ -30,5 +30,5 @@ Client:
 http://prntscr.com/n6s8wk
 http://prntscr.com/n6sa7q
 
-(Ajouts de salles)
+(Ajouts des salles)
 http://prntscr.com/n6s9kt
