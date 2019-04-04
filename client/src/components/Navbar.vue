@@ -21,7 +21,6 @@
     export default {
         name: "Navbar"
     }
-
 </script>
 
 <style scoped>

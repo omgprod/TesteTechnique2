@@ -7,14 +7,20 @@
 </template>
 
 <script>
-  import TableSearch from "./TableSearch";
     export default {
         name: "Index",
-      components: {TableSearch},
+      components: {
+          TableSearch: () => import("./TableSearch")
+      },
       data () {
         return {
-          msg: "Reserv'App"
+          msg: "Reserv'App",
+          loading: null,
+          error: "",
         }
+      },
+      methods: {
+
       }
     }
 </script>

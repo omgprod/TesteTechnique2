@@ -56,7 +56,7 @@ app.get('/', (req, res) => {
 
 /**** CREATE NEW ROOMS ****/
 app.post('/new', (req, res) => {
-    console.log(req);
+    console.log(req.body);
     var room = new Rooms({
         name: req.body.name,
         description: req.body.description,
@@ -91,53 +91,52 @@ app.get('/fetch', (req, res) => {
             if (err) {
                 throw err
             } else {
-                Rooms.find({reserved: true})
-                    .exec(function (err, room) {
-                        if (err) {
-                            throw err
-                        } else {
-                            console.log(room)
-                            date = [room.reservedFor]
-                            if(date < Date.now()){
-                                console.log(date)
-                                Rooms.findOneAndUpdate(room._id, { reserved: false, reservedFor: null},function (err, roomChanged) {
-                                    if(err){
-                                        console.log(err)
-                                    } else {
-                                        console.log(roomChanged)
-                                    }
-                                })
-                            }
-                            return res.status(200).send(
-                                roomUnreserved
-                            );
-                        }
-                    });
+                return res.status(200).send(
+                    roomUnreserved
+                );
             }
         });
+
 });
 
 /**** GET ALL ROOMS RESERVED ****/
-app.get('/reserved', (req, res) => {
+app.get('/verify', (req, res) => {
     Rooms.find({reserved: true})
-    //.sort([['createdAt', -1]])
         .exec(function (err, room) {
             if (err) {
                 throw err
             } else {
-                return res.status(200).send(
-                    room
-                );
+                if (room.lenght !== 0) {
+                    for (i = 0; i < room.length; i++) {
+                        console.log(room[i].reservedFor.getTime())
+                        console.log(Date.now())
+                        if (room[i].reservedFor.getTime() <= Date.now()) {
+                            console.log('Salle Vacante')
+                            Rooms.findOneAndUpdate(room._id, {reserved: false}, function (err, roomChanged) {
+                                if (err) {
+                                    console.log(err)
+                                } else {
+                                    res.status(200).send({
+                                        RoomNowAvailable: roomChanged
+                                    })
+                                }
+                            })
+                        } else {
+                            console.log('Salle toujours résérvé')
+                        }
+                    }
+                }
             }
-        });
+        })
 });
 
 
 /**** BOOK ONE ROOM  ****/
 app.post('/update', (req, res) => {
+    console.log(req.body[1].id)
     var query = {_id: req.body[0]._id}
-    Rooms.findOneAndUpdate(query, { reserved: true, reservedFor: req.body[1].id },function (err, room) {
-        if(err){
+    Rooms.findOneAndUpdate(query, {reserved: true, reservedFor: req.body[1].id}, function (err, room) {
+        if (err) {
             console.log(err)
         } else {
             return res.status(200).send(
@@ -149,10 +148,9 @@ app.post('/update', (req, res) => {
 
 /**** UNBOOK ONE ROOM ****/
 app.post('/unreserved', (req, res) => {
-    console.log(req.body)
     var query = {_id: req.body[0]._id}
-    Rooms.findOneAndUpdate(query, { reserved: false },function (err, room) {
-        if(err){
+    Rooms.findOneAndUpdate(query, {reserved: false}, function (err, room) {
+        if (err) {
             console.log(err)
         } else {
             return res.status(200).send(

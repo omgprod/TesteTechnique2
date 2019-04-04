@@ -6,17 +6,18 @@
     -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.47);
     -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.47);
     box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.47);"
-      @on-selected-rows-change="selectionChanged"
-      :columns="columns"
-      :rows="rows"
-      max-height="350px"
-      :fixed-header="true"
-      :select-options="{ enabled: true,}"
-      :search-options="{ enabled: true, }">
+                    @on-selected-rows-change="selectionChanged"
+                    :columns="columns"
+                    :rows="rows"
+                    max-height="350px"
+                    :fixed-header="true"
+                    :select-options="{ enabled: true,}"
+                    :search-options="{ enabled: true, }">
     </vue-good-table>
     <div slot="selected-row-actions" style="margin-top: 10px">
       <b-form v-on:submit.prevent="onSubmit">
-        <vue-ctk-date-time-picker class="datepicker" label="Choose when to book!" v-model="value" style="width: 200px"></vue-ctk-date-time-picker>
+        <vue-ctk-date-time-picker class="datepicker" label="Choose when to book!" v-model="value"
+                                  style="width: 200px"></vue-ctk-date-time-picker>
         <md-button type="submit" class="md-raised md-accent" style="color: white">Reserve</md-button>
       </b-form>
     </div>
@@ -65,7 +66,19 @@
       };
     },
 
-    methods:{
+    async mounted() {
+      await axios.get('http://localhost:8000/verify')
+        .then(response => {
+          this.rows = response.data
+        }).catch(error => console.log(error))
+      await axios.get('http://localhost:8000/fetch')
+        .then(response => {
+          this.rows = response.data
+        }).catch(error => console.log(error))
+    },
+
+
+    methods: {
       selectionChanged(params) {
         this.rowSelected = params.selectedRows;
       },
@@ -83,24 +96,26 @@
             })
           })
           .then((res, err) => {
-              if(err){
-                this.$notify({
-                  group: 'notify',
-                  title: 'Error',
-                  text: err,
-                  type: 'error',
-                })
-              } else {
-                this.$notify({
-                  group: 'notify',
-                  title: 'Room is now',
-                  text: 'Booked',
-                  type: 'success',
-                })
-              }
-          }).then(() =>{
-            function time(){location.reload()}
-          setTimeout(time, 3000);
+            if (err) {
+              this.$notify({
+                group: 'notify',
+                title: 'Error',
+                text: err,
+                type: 'error',
+              })
+            } else {
+              this.$notify({
+                group: 'notify',
+                title: 'Room is now',
+                text: 'Booked',
+                type: 'success',
+              })
+            }
+          }).then(() => {
+          function time() {
+            location.reload()
+          }
+          setTimeout(time, 2000);
         })
       }
     },
@@ -108,13 +123,7 @@
     created() {
       axios.get('http://localhost:8000/fetch')
         .then(response => {
-          console.log(response.data)
           this.rows = response.data
-          this.$notify({
-            group: 'notify',
-            title: 'Hello user!',
-            text: 'here you can book a room',
-          });
         }).catch(error => console.log(error))
     },
   };
@@ -122,9 +131,9 @@
 
 
 <style scoped>
-.datepicker{
-  -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.47);
-  -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.47);
-  box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.47);
-}
+  .datepicker {
+    -webkit-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.47);
+    -moz-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.47);
+    box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.47);
+  }
 </style>
