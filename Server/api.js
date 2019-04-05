@@ -56,7 +56,7 @@ app.get('/', (req, res) => {
 
 /**** CREATE NEW ROOMS ****/
 app.post('/new', (req, res) => {
-    console.log(req.body);
+    //console.log(req.body);
     var room = new Rooms({
         name: req.body.name,
         description: req.body.description,
@@ -78,7 +78,6 @@ app.post('/new', (req, res) => {
                 Method: req.method,
                 Message: 'room créé',
                 room
-
             });
         }
     });
@@ -106,25 +105,27 @@ app.get('/verify', (req, res) => {
             if (err) {
                 throw err
             } else {
-                if (room.lenght !== 0) {
+                if (room.length === 0) {
+                    return false;
+                } else {
                     for (i = 0; i < room.length; i++) {
-                        console.log('                     ')
-                        console.log(JSON.stringify(room[i].reservedFor))
+                        console.log('                     ');
+                        console.log(JSON.stringify(room[i].reservedFor));
                         //console.log(room[i].reservedFor.getTime())
                         //console.log(Date.now())
                         if (room[i].reservedFor.getTime() <= Date.now()) {
-                            console.log('Salle Vacante: ' + room[i]._id)
+                            console.log('Salle Vacante: ' + room[i]._id);
                             Rooms.findByIdAndUpdate(room[i]._id, {reserved: false}, function (err, roomChanged) {
                                 if (err) {
-                                    console.log(err)
+                                    console.log(err);
                                 } else {
                                     res.status(200).send({
                                         RoomNowAvailable: roomChanged
-                                    })
+                                    });
                                 }
                             })
                         } else {
-                            console.log('Salle toujours résérvé')
+                            console.log('Salle toujours résérvé');
                         }
                     }
                 }
@@ -135,11 +136,11 @@ app.get('/verify', (req, res) => {
 
 /**** BOOK ONE ROOM  ****/
 app.post('/update', (req, res) => {
-    console.log(req.body[1].id)
-    var query = {_id: req.body[0]._id}
+    console.log(req.body[1].id);
+    var query = {_id: req.body[0]._id};
     Rooms.findOneAndUpdate(query, {reserved: true, reservedFor: req.body[1].id}, function (err, room) {
         if (err) {
-            console.log(err)
+            console.log(err);
         } else {
             return res.status(200).send(
                 room
@@ -150,10 +151,10 @@ app.post('/update', (req, res) => {
 
 /**** UNBOOK ONE ROOM ****/
 app.post('/unreserved', (req, res) => {
-    var query = {_id: req.body[0]._id}
+    var query = {_id: req.body[0]._id};
     Rooms.findOneAndUpdate(query, {reserved: false}, function (err, room) {
         if (err) {
-            console.log(err)
+            console.log(err);
         } else {
             return res.status(200).send(
                 room
@@ -164,7 +165,7 @@ app.post('/unreserved', (req, res) => {
 
 /**** Port Listenner ****/
 app.listen(port, ip, () => {
-    console.log("Server = http://" + ip + ":" + port);
+    console.log("Api is hosted on = http://" + ip + ":" + port);
 });
 
 /**** Copyright ****/

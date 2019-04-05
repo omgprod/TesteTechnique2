@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1ec5559c-ab4f-4c18-9b3a-0b522aeaabf6" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/client/src/components/TableSearch.vue" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/TableSearch.vue" afterDir="false" />
-    </list>
+    <list default="true" id="1ec5559c-ab4f-4c18-9b3a-0b522aeaabf6" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -15,20 +13,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Server/api.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2216">
-              <caret line="101" column="40" selection-start-line="101" selection-start-column="40" selection-end-line="101" selection-end-column="40" />
+            <state relative-caret-position="2645">
+              <caret line="133" column="3" selection-start-line="133" selection-start-column="3" selection-end-line="133" selection-end-column="3" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client/src/components/TableSearch.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="276">
-              <caret line="69" column="33" selection-start-line="69" selection-start-column="33" selection-end-line="69" selection-end-column="33" />
+            <state relative-caret-position="1725">
+              <caret line="75" column="65" selection-start-line="75" selection-start-column="65" selection-end-line="75" selection-end-column="65" />
               <folding>
                 <element signature="n#style#0;n#vue-good-table#0;n#div#0;n#template#0;n#!!top" expanded="true" />
               </folding>
@@ -39,8 +37,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client/src/components/Index.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="184">
-              <caret line="8" column="8" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="8" />
+            <state relative-caret-position="484">
+              <caret line="25" selection-start-line="25" selection-end-line="25" />
             </state>
           </provider>
         </entry>
@@ -107,56 +105,57 @@
         <option value="$PROJECT_DIR$/client/src/components/Refresh.vue" />
         <option value="$PROJECT_DIR$/client/src/components/Navbar.vue" />
         <option value="$PROJECT_DIR$/client/src/components/Index.vue" />
-        <option value="$PROJECT_DIR$/Server/api.js" />
         <option value="$PROJECT_DIR$/client/src/components/TableSearch.vue" />
+        <option value="$PROJECT_DIR$/Server/api.js" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
-    <option name="x" value="-8" />
-    <option name="width" value="977" />
-    <option name="height" value="1038" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="-7" />
+    <option name="width" value="1294" />
+    <option name="height" value="1047" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
-              <item name="TesteTechnique2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TesteTechnique2" type="462c0819:PsiDirectoryNode" />
+              <item name="TesteTechnique2-master" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TesteTechnique2-master" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="TesteTechnique2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TesteTechnique2" type="462c0819:PsiDirectoryNode" />
+              <item name="TesteTechnique2-master" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TesteTechnique2-master" type="462c0819:PsiDirectoryNode" />
               <item name="client" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="TesteTechnique2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TesteTechnique2" type="462c0819:PsiDirectoryNode" />
+              <item name="TesteTechnique2-master" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TesteTechnique2-master" type="462c0819:PsiDirectoryNode" />
               <item name="client" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="TesteTechnique2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TesteTechnique2" type="462c0819:PsiDirectoryNode" />
+              <item name="TesteTechnique2-master" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TesteTechnique2-master" type="462c0819:PsiDirectoryNode" />
               <item name="client" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="TesteTechnique2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TesteTechnique2" type="462c0819:PsiDirectoryNode" />
+              <item name="TesteTechnique2-master" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TesteTechnique2-master" type="462c0819:PsiDirectoryNode" />
               <item name="Server" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -211,17 +210,18 @@
       <workItem from="1554197971032" duration="23362000" />
       <workItem from="1554329567561" duration="9309000" />
       <workItem from="1554373862460" duration="3184000" />
+      <workItem from="1554422613027" duration="117000" />
+      <workItem from="1554422761815" duration="6180000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="45252000" />
+    <option name="totallyTimeSpent" value="51549000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-6" y="0" width="781" height="830" extended-state="0" />
-    <editor active="true" />
+    <frame x="-7" y="0" width="1294" height="1047" extended-state="0" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26209676" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19585988" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -233,7 +233,7 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
-      <window_info anchor="bottom" id="Terminal" order="9" weight="0.19707207" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="9" visible="true" weight="0.19481982" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" weight="0.32995495" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -345,13 +345,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/components/Index.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="8" column="8" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client/src/components/AddRoom.vue">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1771">
@@ -363,20 +356,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Server/api.js">
+    <entry file="file://$PROJECT_DIR$/client/src/components/Index.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2216">
-          <caret line="101" column="40" selection-start-line="101" selection-start-column="40" selection-end-line="101" selection-end-column="40" />
+        <state relative-caret-position="484">
+          <caret line="25" selection-start-line="25" selection-end-line="25" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/client/src/components/TableSearch.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="69" column="33" selection-start-line="69" selection-start-column="33" selection-end-line="69" selection-end-column="33" />
+        <state relative-caret-position="1725">
+          <caret line="75" column="65" selection-start-line="75" selection-start-column="65" selection-end-line="75" selection-end-column="65" />
           <folding>
             <element signature="n#style#0;n#vue-good-table#0;n#div#0;n#template#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Server/api.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2645">
+          <caret line="133" column="3" selection-start-line="133" selection-start-column="3" selection-end-line="133" selection-end-column="3" />
         </state>
       </provider>
     </entry>

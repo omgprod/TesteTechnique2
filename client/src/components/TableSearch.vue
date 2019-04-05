@@ -26,6 +26,7 @@
 
 <script>
   import axios from 'axios'
+
   export default {
     name: 'my-component',
     data() {
@@ -68,6 +69,12 @@
 
     async mounted() {
       setInterval(this.doThis, 30000);
+      console.log(this.value)
+        this.$notify({
+          group: 'notify',
+          title: 'Welcome back!',
+          text: 'Do not forget to check the room before submit.',
+        })
     },
 
     methods: {
@@ -87,39 +94,48 @@
       },
 
       onSubmit(evt) {
-        this.rowSelected.push({id: this.value})
         evt.preventDefault()
-        axios.post('http://localhost:8000/update', this.rowSelected)
-          .catch(error => {
-            this.$notify({
-              group: 'notify',
-              title: 'Error',
-              text: error,
-              type: 'error',
-            })
+        this.rowSelected.push({id: this.value})
+        if (this.value === null) {
+          this.$notify({
+            group: 'notify',
+            title: 'Error',
+            text: 'Veuillez cocher une salle.',
+            type: 'error',
           })
-          .then((res, err) => {
-            if (err) {
+        } else {
+          axios.post('http://localhost:8000/update', this.rowSelected)
+            .catch(error => {
               this.$notify({
                 group: 'notify',
                 title: 'Error',
-                text: err,
+                text: error,
                 type: 'error',
               })
-            } else {
-              this.$notify({
-                group: 'notify',
-                title: 'Room is now',
-                text: 'Booked',
-                type: 'success',
-              })
-            }
-          }).then(() => {
-          axios.get('http://localhost:8000/fetch')
-            .then(response => {
-              this.rows = response.data
-            }).catch(error => console.log(error))
-        })
+            })
+            .then((res, err) => {
+              if (err) {
+                this.$notify({
+                  group: 'notify',
+                  title: 'Error',
+                  text: err,
+                  type: 'error',
+                })
+              } else {
+                this.$notify({
+                  group: 'notify',
+                  title: 'Room is now',
+                  text: 'Booked',
+                  type: 'success',
+                })
+              }
+            }).then(() => {
+            axios.get('http://localhost:8000/fetch')
+              .then(response => {
+                this.rows = response.data
+              }).catch(error => console.log(error))
+          })
+        }
       }
     },
 
