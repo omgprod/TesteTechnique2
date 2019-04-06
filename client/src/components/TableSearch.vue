@@ -1,8 +1,6 @@
 <template>
   <div>
-    <vue-good-table style="
-    margin-right: 10%;
-    margin-left: 10%;
+    <vue-good-table id="goodTable" style="
     -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.47);
     -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.47);
     box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.47);"
@@ -79,14 +77,14 @@
 
     methods: {
       async doThis() {
-        axios.get('http://localhost:8000/verify')
+        axios.get('http://babito.hopto.org:8000/verify')
           .then(response => {
             this.rows = response.data
-          }).catch(error => console.log(error))
-        axios.get('http://localhost:8000/fetch')
+          })
+        axios.get('http://babito.hopto.org:8000/fetch')
           .then(response => {
             this.rows = response.data
-          }).catch(error => console.log(error))
+          })
       },
 
       selectionChanged(params) {
@@ -95,16 +93,23 @@
 
       onSubmit(evt) {
         evt.preventDefault()
-        this.rowSelected.push({id: this.value})
-        if (this.value === null) {
+        if(typeof this.rowSelected === 'undefined' || this.rowSelected === null || this.rowSelected.length === 0){
           this.$notify({
             group: 'notify',
             title: 'Error',
-            text: 'Veuillez cocher une salle.',
+            text: 'Choose the room to book.',
+            type: 'error',
+          })
+        } else if (this.value === null) {
+          this.$notify({
+            group: 'notify',
+            title: 'Error',
+            text: 'Choose the date to book',
             type: 'error',
           })
         } else {
-          axios.post('http://localhost:8000/update', this.rowSelected)
+          this.rowSelected.push({id: this.value})
+          axios.post('http://babito.hopto.org:8000/update', this.rowSelected)
             .catch(error => {
               this.$notify({
                 group: 'notify',
@@ -130,20 +135,20 @@
                 })
               }
             }).then(() => {
-            axios.get('http://localhost:8000/fetch')
+            axios.get('http://babito.hopto.org:8000/fetch')
               .then(response => {
                 this.rows = response.data
-              }).catch(error => console.log(error))
+              })
           })
         }
       }
     },
 
     created() {
-      axios.get('http://localhost:8000/fetch')
+      axios.get('http://babito.hopto.org:8000/fetch')
         .then(response => {
           this.rows = response.data
-        }).catch(error => console.log(error))
+        })
       this.doThis()
     },
   };
@@ -155,5 +160,20 @@
     -webkit-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.47);
     -moz-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.47);
     box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.47);
+  }
+
+  #goodTable{
+    margin-right: 10%;
+    margin-left: 10%;
+  }
+
+  @media screen and (max-width: 640px) {
+    body {
+      height: fit-content;
+    }
+    #goodTable{
+      margin-right: 0;
+      margin-left: 0;
+    }
   }
 </style>

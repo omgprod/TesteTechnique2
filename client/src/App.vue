@@ -8,8 +8,8 @@
 </template>
 
 <script>
-import Navbar from "./components/Navbar";
-import Footer from "./components/Footer";
+import Navbar from "./components/views/Navbar";
+import Footer from "./components/views/Footer";
 export default {
   name: 'App',
   components: {Navbar, Footer},

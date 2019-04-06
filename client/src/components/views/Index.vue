@@ -10,7 +10,7 @@
     export default {
         name: "Index",
       components: {
-          TableSearch: () => import("./TableSearch")
+          TableSearch: () => import("../TableSearch")
       },
       data () {
         return {

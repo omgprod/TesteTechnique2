@@ -1,5 +1,5 @@
 <template>
-  <div style="margin-left: 30%; margin-right: 30%;margin-top: 5%">
+  <div id="containerDiv" style="margin-left: 30%; margin-right: 30%;margin-top: 5%">
     <h2 style="margin-top: 5%; margin-bottom: 5%" >Add a new room: </h2>
     <div class="card-body">
     <b-form @submit="onSubmit" @reset="onReset" v-if="show">
@@ -46,7 +46,6 @@
       </b-form-group>
 
       <md-button type="submit" class="md-raised">Submit</md-button>
-      <md-button type="reset" class="md-raised md-accent">Reset</md-button>
     </b-form>
     </div>
   </div>
@@ -71,19 +70,19 @@
       onSubmit(evt) {
         evt.preventDefault()
         alert(JSON.stringify(this.form))
-        axios.post('http://localhost:8000/new', this.form)
+        axios.post('http://babito.hopto.org:8000/new', this.form)
           .catch(error => {
             console.log(error)
           })
           .then(function () {
-          location.reload('http://localhost:8080/#/')
+          location.reload('http://babito.hopto.org:8000/#/')
         })
 
       },
       onReset(evt) {
         evt.preventDefault()
-        this.form.email = ''
-        this.form.name = ''
+        this.form.email = null
+        this.form.name = null
         this.form.food = null
         this.form.checked = []
         this.show = false
@@ -97,6 +96,8 @@
 
 
 <style scoped>
+
+
   h2 {
     color: #eeeeee;
     text-shadow: -1px 0 0 rgba(0, 0, 0, 0.8),
@@ -110,5 +111,20 @@
     -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.47);
     -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.47);
     box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.47);
+  }
+
+  #containerDiv{
+    margin-left: 30%;
+    margin-right: 30%;
+    margin-top: 5%
+  }
+
+  @media screen and (max-width: 640px) {
+    body {
+    height: fit-content;
+    }
+    #containerDiv{
+      margin-top: 2%
+    }
   }
 </style>
