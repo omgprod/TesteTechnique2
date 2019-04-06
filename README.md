@@ -1,3 +1,5 @@
+Petite Demo : http://testetechnique.herokuapp.com/#/ (API sur mon RaspberryPi sans certificat SSL, pour le bon fonctionnement laisser l'url en http )
+
 # TesteTechnique2
 
 Back-End  : NodeJS - Express - Mongoose - MongoDB  
@@ -13,7 +15,9 @@ JOUR 3 = 95% ( Logique du temps - Corrections Api ) + En cours: Implementation f
 
 JOUR 4 = 99% ( Auto-Refresh du tableaux et déréserves les salles aprés la date et l'heure indiqué pour la réservation )
 
-En cours: Recherche d'animations "super cool" et upload du teste sur heroku ou raspberry  
+JOUR 5 = Gestion d'erreurs maximisé, Upload du teste sur Heroku, Upload API sur mon RaspberryPi en tant que Web Servez
+
+En cours: Recherche d'animations "super cool"
 
 # How To :
 
