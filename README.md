@@ -15,7 +15,7 @@ JOUR 3 = 95% ( Logique du temps - Corrections Api ) + En cours: Implementation f
 
 JOUR 4 = 99% ( Auto-Refresh du tableaux et déréserves les salles aprés la date et l'heure indiqué pour la réservation )
 
-JOUR 5 = Gestion d'erreurs maximisé, Upload du teste sur Heroku, Upload API sur mon RaspberryPi en tant que Web Servez
+JOUR 5 = Gestion d'erreurs maximisés, Upload du teste sur Heroku, Upload API sur mon RaspberryPi en tant que Web Servez
 
 En cours: Recherche d'animations "super cool"
 
