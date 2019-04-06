@@ -33,7 +33,7 @@ Server:
 Client:
 - cd client
 - npm i 
-- npm run dev
+- npm run dev (Requête client - api envoyer sur mon raspberry: http://babito.hopto.org:8000/)
 
 # Screen :
 (Index)
